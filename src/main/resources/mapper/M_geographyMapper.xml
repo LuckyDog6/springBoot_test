@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gdut.test.dao.M_geographyMapper">
+    <resultMap id="BaseResultMap" type="com.gdut.test.bean.M_geography">
+        <id column="id" jdbcType="INTEGER" property="id"></id>
+        <result column="title" jdbcType="VARCHAR" property="title"></result>
+        <result column="select_a" jdbcType="VARCHAR" property="select_a"></result>
+        <result column="select_b" jdbcType="VARCHAR" property="select_b"></result>
+        <result column="select_c" jdbcType="VARCHAR" property="select_c"></result>
+        <result column="select_d" jdbcType="VARCHAR" property="select_d"></result>
+        <result column="answer" jdbcType="VARCHAR" property="answer"></result>
+    </resultMap>
+
+    <select id="getAll" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select id,title,select_a,select_b,select_c,select_d,answer from m_geography
+    </select>
+
+</mapper>
